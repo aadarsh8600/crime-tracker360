@@ -23,4 +23,4 @@ jobs:
 
       - name: Upload latest ETL script to S3
         run: |
-          aws s3 cp lambdainvokingetl.py s3://trans123321/lambdainvokingetl.py
+          aws s3 cp lambdainvokingetl.py s3://trans123321/abcd/lambdainvokingetl.py
