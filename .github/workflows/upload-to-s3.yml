@@ -3,7 +3,7 @@ name: Upload ETL Script & Trigger Job
 on:
   push:
     branches:
-      - main
+      - main  # or 'main' based on your use case
 
 jobs:
   upload-and-run-etl:
@@ -13,95 +13,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      #   - name: Set up Python
-      #     uses: actions/setup-python@v4
-      #     with:
-      #       python-version: 3.10
-
-      #   - name: Install AWS CLI
-      #     run: |
-      #       curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-      #       unzip awscliv2.zip
-      #       sudo ./aws/install
-
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }} # ✅ Added session token
-          aws-region: ${{ secrets.REGION }}
-
-      - name: Upload latest ETL script to S3
-        run: |
-          aws s3 cp name: Upload ETL Script & Trigger Job
-
-on:
-  push:
-    branches:
-      - blade
-
-jobs:
-  upload-and-run-etl:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      #   - name: Set up Python
-      #     uses: actions/setup-python@v4
-      #     with:
-      #       python-version: 3.10
-
-      #   - name: Install AWS CLI
-      #     run: |
-      #       curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-      #       unzip awscliv2.zip
-      #       sudo ./aws/install
-
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v2
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }} # ✅ Added session token
-          aws-region: ${{ secrets.REGION }}
-
-      - name: Upload latest ETL script to S3
-        run: |
-          aws s3 cp name: Upload ETL Script & Trigger Job
-
-on:
-  push:
-    branches:
-      - blade
-
-jobs:
-  upload-and-run-etl:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      #   - name: Set up Python
-      #     uses: actions/setup-python@v4
-      #     with:
-      #       python-version: 3.10
-
-      #   - name: Install AWS CLI
-      #     run: |
-      #       curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-      #       unzip awscliv2.zip
-      #       sudo ./aws/install
-
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v2
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }} # ✅ Added session token
+          aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}  # Optional if you're using temporary credentials
           aws-region: ${{ secrets.REGION }}
 
       - name: Upload latest ETL script to S3
