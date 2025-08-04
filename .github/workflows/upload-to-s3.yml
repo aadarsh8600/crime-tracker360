@@ -21,4 +21,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}  # 🔑 Include this if using temporary creds
           AWS_REGION: 'us-east-1'
-          SOURCE_DIR: '.'
+          SOURCE_DIR: 'SAMPLE'
