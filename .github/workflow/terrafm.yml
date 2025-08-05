@@ -3,7 +3,7 @@ name: Terraform S3 Deploy
 on:
   push:
     branches:
-      - main  # triggers when you push to main branch IOPPPPP
+      - main  # triggers when you push to main branch IOPPPPPl;,.
 
 jobs:
   terraform:
