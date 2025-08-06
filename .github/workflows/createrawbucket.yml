@@ -31,14 +31,20 @@ jobs:
       - name: Terraform Validate
         
         run: terraform validate
+        
 
       - name: Terraform Apply
         
         run: terraform apply -auto-approve
 
+        env:
+            TF_VAR_glue_role_arn: ${{ secrets.GLUE_ROLE_ARN }}
+
+        
+
       - name: Upload ETL Script to S3
         run: |
-          aws s3 cp lambdainvokingetl.py s3://bucketforgitfile123/data1/lambdainvokingetl.py
+          aws s3 cp lambdainvokingetl.py s3://automationteraform2310201/scripts/lambdainvokingetl.py
           echo "ETL script uploaded to S3."
 
       - name: Start Glue ETL Job
