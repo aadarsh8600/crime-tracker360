@@ -3,6 +3,13 @@ variable "region" {
   default = "us-east-1"
 }
 
+
+variable "glue_role_arn" {
+  description = "IAM role ARN to use for Glue Job"
+  type        = string
+}
+
+
 #declare a bucket name
 variable "bucket_name_prefix" {
   default = "automationteraform2310201"
@@ -21,5 +28,5 @@ variable "glue_crawler_name" {
 
 #declare a script path
 variable "script_s3_path" {
-  default = "s3://bucketforgitfile123/data1/lambdainvokingetl.py"
+  default = "s3://automationteraform2310201/scripts/lambdainvokingetl.py"
 }
