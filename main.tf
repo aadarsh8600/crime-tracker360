@@ -22,7 +22,7 @@ resource "aws_glue_job" "etl_job" {
 }
 
 resource "aws_glue_crawler" "my_crawler" {
-  name          = var.glue_facts_crawler_name
+  name          = var.glue_crawler_name
   role          = local.glue_role_arn
   database_name = aws_glue_catalog_database.etl_db.name
 
