@@ -1,5 +1,9 @@
-resource "aws_s3_bucket" "etl_bucket" {
-  bucket = var.bucket_name_prefix
+resource "aws_s3_bucket" "masterdata" {
+  bucket = var.bucket_name_for_masterdata
+}
+
+resource "aws_s3_bucket" "trasnformeddata"{
+  bucket=var.bucket_name_for__transformeddata
 }
 
 resource "aws_glue_catalog_database" "etl_db" {
