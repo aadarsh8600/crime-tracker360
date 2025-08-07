@@ -10,23 +10,20 @@ variable "glue_role_arn" {
 }
 
 
-#declare a bucket name
-variable "bucket_name_prefix" {
-  default = "automationteraform2310201"
-}
-
 
 #declare a glue job name
 variable "glue_job_name" {
   default = "glue-etl-job201"
 }
 
-#declare a crawler name
-variable "glue_crawler_name" {
-  default = "my-etl-crawler201"
+
+
+#declare a crawler for facts table
+variable "glue_crawler_name"{
+  default="my_etl_crawler"
 }
 
-#declare a script path
+declare a script path
 variable "script_s3_path" {
-  default = "s3://automationteraform2310201/scripts/lambdainvokingetl.py"
+  default = "s3://raw-master-transformed-factdim-grp-5/scripts/learning.py"
 }

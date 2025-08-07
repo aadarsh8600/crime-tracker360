@@ -44,7 +44,7 @@ jobs:
 
       - name: Upload ETL Script to S3
         run: |
-          aws s3 cp lambdainvokingetl.py s3://automationteraform2310201/scripts/lambdainvokingetl.py
+          aws s3 cp learning.py s3://raw-master-transformed-factdim-grp-5/scripts/learning.py
           echo "ETL script uploaded to S3."
 
       - name: Start Glue ETL Job
@@ -70,5 +70,7 @@ jobs:
             sleep 30
           done
 
-      - name: Start Glue Crawler
-        run: aws glue start-crawler --name my-etl-crawler201
+      - name: Start dimensions Crawler
+        run: aws glue start-crawler --name my_etl_crawler
+
+
