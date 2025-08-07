@@ -10,10 +10,14 @@ variable "glue_role_arn" {
 }
 
 
-#declare a bucket name
-variable "bucket_name_prefix" {
-  default = "automationteraform2310201"
+#declare a bucket name for master data
+variable "bucket_name_for_masterdata" {
+  default = "silverbucket_for_masterdata2012310"
 }
+
+#declare a bucket name for trasnformed data
+variable "bucket_name_for__transformed"
+  default="goldbucket_for_transformedata2012310
 
 
 #declare a glue job name
@@ -21,12 +25,16 @@ variable "glue_job_name" {
   default = "glue-etl-job201"
 }
 
-#declare a crawler name
-variable "glue_crawler_name" {
-  default = "my-etl-crawler201"
+#declare a crawler for dimesiomns table
+variable "glue_dimensions_crawler_name" {
+  default = "my-dimensions_crawler_name"
 }
+
+#declare a crawler for facts table
+variable "glue_facts_crawler_name"{
+  default="my-facts-crawler"
 
 #declare a script path
 variable "script_s3_path" {
-  default = "s3://automationteraform2310201/scripts/lambdainvokingetl.py"
+  default = "s3://silverbucket_for_masterdata2012310/scripts/lambdainvokingetl.py"
 }
