@@ -1,11 +1,3 @@
-resource "aws_s3_bucket" "masterdata" {
-  bucket = var.bucket_name_for_masterdata
-}
-
-resource "aws_s3_bucket" "trasnformeddata"{
-  bucket=var.bucket_name_for__transformeddata
-}
-
 resource "aws_glue_catalog_database" "etl_db" {
   name = "crime_db123"
 }
@@ -29,13 +21,13 @@ resource "aws_glue_job" "etl_job" {
   worker_type       = "G.1X"
 }
 
-resource "aws_glue_crawler" "facts_crawler" {
+resource "aws_glue_crawler" "my_crawler" {
   name          = var.glue_facts_crawler_name
   role          = local.glue_role_arn
   database_name = aws_glue_catalog_database.etl_db.name
 
   s3_target {
-    path = "s3://${aws_s3_bucket.etl_bucket.bucket}/facts_data/"
+    path = "s3://raw-master-transformed-factdim-grp-5/facts_data/"
  }
 
   depends_on = [aws_glue_job.etl_job]
