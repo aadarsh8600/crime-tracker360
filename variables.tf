@@ -16,9 +16,9 @@ variable "bucket_name_for_masterdata" {
 }
 
 #declare a bucket name for trasnformed data
-variable "bucket_name_for__transformed"
+variable "bucket_name_for__transformeddata"{
   default="goldbucket_for_transformedata2012310
-
+}
 
 #declare a glue job name
 variable "glue_job_name" {
