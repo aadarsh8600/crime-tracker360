@@ -1,4 +1,10 @@
 from pyspark.sql.functions import lit
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder \
+    .appName("MyApp") \
+    .getOrCreate()
+
 
 lapd_df1 = spark.read.option("header", "true").csv("s3://final-project-bucket-group-5/raw-data-ny-la-cpd/Crime_Data_from_2010_to_2019.csv").withColumn("source", lit("lapd"))
 lapd_df2 = spark.read.option("header", "true").csv("s3://final-project-bucket-group-5/raw-data-ny-la-cpd/Crime_Data_from_2020_to_Present_20250730.csv").withColumn("source", lit("lapd"))
@@ -469,4 +475,5 @@ dim_suspect.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3:
 dim_location.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/facts-dims1/location-dim1/")
 dim_jurisdiction.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/facts-dims1/jurisdiction-dim1/")
 job.commit()
+
 
