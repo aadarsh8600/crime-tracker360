@@ -454,18 +454,19 @@ nypd_df.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://ra
 cpd_df.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/raw-data/cpd-raw/")
 
 # Write Master Raw Data
-master_df.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/master-data/")
+master_df.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/master-data1/")
 
 # Write Transformed Data
-transform_df2.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/transformed-data/")
+transform_df2.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/transformed-data1/")
 
 # Write Fact Table
-fact_crime_cases.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/facts-dims/fact/")
+fact_crime_cases.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/facts-dims1/fact1/")
 
 # Write Dimension Tables
-dim_crime.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/facts-dims/crime-dim/")
-dim_victim.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/facts-dims/victim-dim/")
-dim_suspect.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/facts-dims/suspect-dim/")
-dim_location.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/facts-dims/location-dim/")
-dim_jurisdiction.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/facts-dims/jurisdiction-dim/")
+dim_crime.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/facts-dims1/crime-dim1/")
+dim_victim.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/facts-dims1/victim-dim1/")
+dim_suspect.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/facts-dims1/suspect-dim1/")
+dim_location.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/facts-dims1/location-dim1/")
+dim_jurisdiction.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/facts-dims1/jurisdiction-dim1/")
 job.commit()
+
