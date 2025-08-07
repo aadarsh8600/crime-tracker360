@@ -474,6 +474,7 @@ dim_victim.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3:/
 dim_suspect.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/facts-dims1/suspect-dim1/")
 dim_location.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/facts-dims1/location-dim1/")
 dim_jurisdiction.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/facts-dims1/jurisdiction-dim1/")
-job.commit()
+
+
 
 
