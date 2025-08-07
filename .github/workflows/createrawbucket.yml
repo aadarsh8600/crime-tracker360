@@ -70,5 +70,8 @@ jobs:
             sleep 30
           done
 
-      - name: Start Glue Crawler
-        run: aws glue start-crawler --name my-etl-crawler201
+      - name: Start dimensions Crawler
+        run: aws glue start-crawler --name my_dimesions_crawler
+
+      - name: Start Facts crawler
+        run: aws glue start-crawler --name my_facts_crawler
