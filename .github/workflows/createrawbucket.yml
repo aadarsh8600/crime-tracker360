@@ -10,9 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    # Step 1: Get the repo's code into the runner
       - name: Checkout Code
         uses: actions/checkout@v3
-
+        
+    # Step 2: Configure AWS CLI credentials from GitHub Secrets
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
@@ -21,32 +23,33 @@ jobs:
           aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
           aws-region: ${{ secrets.REGION }}
 
+     # Step 3: Install Terraform in the runner environment
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
 
+     # Step 4: Initialize Terraform (download providers, set up backend, etc.)
       - name: Terraform Init
-        
         run: terraform init
 
-      - name: Terraform Validate
-        
+     # Step 5: Validate Terraform configuration syntax and structure
+      - name: Terraform Validate  
         run: terraform validate
         
-
+      # Step 6: Apply Terraform changes (deploy/update AWS infrastructure) 
       - name: Terraform Apply
-        
         run: terraform apply -auto-approve
 
         env:
             TF_VAR_glue_role_arn: ${{ secrets.GLUE_ROLE_ARN }}
 
         
-
+      # Step 7: Upload the ETL Python script to S3 so Glue can access it
       - name: Upload ETL Script to S3
         run: |
-          aws s3 cp learning.py s3://raw-master-transformed-factdim-grp-5/scripts/learning.py
+          aws s3 cp ETL-SCRIPTS.py s3://raw-master-transformed-factdim-grp-5/scripts/ETL-SCRIPTS.py
           echo "ETL script uploaded to S3."
 
+      # Step 8: Start the AWS Glue ETL job
       - name: Start Glue ETL Job
         id: start_etl
         run: |
@@ -54,6 +57,7 @@ jobs:
           echo "ETL JobRunId: $JOB_RUN_ID"
           echo "job_run_id=$JOB_RUN_ID" >> $GITHUB_OUTPUT
 
+       # Step 9: Wait until the Glue job finishes (poll status every 30s)
       - name: Wait for ETL Job Completion
         run: |
           JOB_RUN_ID=${{ steps.start_etl.outputs.job_run_id }}
@@ -70,6 +74,7 @@ jobs:
             sleep 30
           done
 
+      # Step 10: Start Glue Crawler to refresh Data Catalog with new data
       - name: Start dimensions Crawler
         run: aws glue start-crawler --name my_etl_crawler
 
