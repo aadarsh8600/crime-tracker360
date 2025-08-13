@@ -15,13 +15,13 @@ Despite the availability of extensive crime-related data, cities often struggle 
 
 This project aims to analyze historical crime records using big data technologies to extract actionable insights that can help law enforcement agencies:
 
-📌 Understand crime distribution by type, time, and location
+- Understand crime distribution by type, time, and location
 
-📌 Identify trends and anomalies across years and neighbourhoods
+- Identify trends and anomalies across years and neighbourhoods
 
-📌 Improve prediction and prevention strategies
+- Improve prediction and prevention strategies
 
-📌 Support data-driven policing through real-time dashboards
+- Support data-driven policing through real-time dashboards
 
 ## 📌 Objectives
 -  Identify **most common crime types** across NYPD, LAPD datasets.  
