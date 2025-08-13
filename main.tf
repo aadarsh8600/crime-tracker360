@@ -31,14 +31,5 @@ resource "aws_glue_crawler" "my_crawler" {
  }
 
   depends_on = [aws_glue_job.etl_job]
-}
-resource "aws_glue_crawler" "dimension_crawler"{
-  name=var.glue_dimensions_crawler_name
-  role=local.glue_role_arn
-  database_name=aws_glue_catalog_database.etl_db_name
-  s3_target {
-    path="s3://${aws_s3_bucket.etl_bucket.bucket}/dimensions_data/"
-}
 
-  depends_on=[aws_glue_job.etl_job]
 }
