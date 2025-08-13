@@ -81,6 +81,9 @@ This project aims to analyze historical crime records using big data technologie
 3. 🗂 **Master Data Creation** – Merge & join all two datasets (NYPD, LAPD) into a standardized unified dataset.
 4. 🧹 **Data Cleaning** – Remove duplicates, handle missing data, standardize formats.  
 5. 📊 **Data Analysis** – Trends, hotspots, and weapon distribution.  
-6. 📉 **Dashboard Creation** – Interactive visuals with filters.  
+6. 📉 **Dashboard Creation** – Interactive visuals with filters.
+
+   <img width="3200" height="1196" alt="Architecture diagram" src="https://github.com/user-attachments/assets/c208dafd-a12a-4f80-978f-7b4aa1410d4d" />
+
 
 
