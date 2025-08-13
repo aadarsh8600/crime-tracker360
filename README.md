@@ -67,12 +67,12 @@ This project aims to analyze historical crime records using big data technologie
 ## 📌Tech stack
 
 
--  **Cloud & Storage:** AWS S3, AWS Glue, AWS Athena  
--  **Data Processing:** PySpark, Python (Pandas, NumPy)  
--  **Database:** AWS Glue Data Catalog 
--  **Visualization:** Power BI 
--  **Version Control:** GitHub  
--  **Automation:** Github action and Terraform
+-  **Cloud & Storage:** AWS S3, AWS Glue, AWS Athena.  
+-  **Data Processing:** PySpark, SparkSQL, Python (Pandas, NumPy).  
+-  **Database:** AWS Glue Data Catalog. 
+-  **Visualization:** Power BI. 
+-  **Version Control:** GitHub.  
+-  **Automation:** Github action and Terraform.
 ## 📌 Workflow
 
 1.  **Data Collection** – Crime records from NYPD, LAPD.  
