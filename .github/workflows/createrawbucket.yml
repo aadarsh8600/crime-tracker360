@@ -44,7 +44,7 @@ jobs:
 
       - name: Upload ETL Script to S3
         run: |
-          aws s3 cp learning.py s3://raw-master-transformed-factdim-grp-5/scripts/learning.py
+          aws s3 cp learning.py s3://raw-master-transformed-factdim-grp-5/scripts/etlscript.py
           echo "ETL script uploaded to S3."
 
       - name: Start Glue ETL Job
