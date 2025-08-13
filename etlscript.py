@@ -365,7 +365,8 @@ write_mode = "overwrite"
 file_format = "csv"
 
 # Write Transformed Data
-transform_df2.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/transformed-data/")
+transform_df2.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/transformed-data_automate/")
+
 
 
 
