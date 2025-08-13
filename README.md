@@ -24,22 +24,22 @@ This project aims to analyze historical crime records using big data technologie
 📌 Support data-driven policing through real-time dashboards
 
 ## 📌 Objectives
-- 📌 Identify **most common crime types** across NYPD, LAPD datasets.  
-- 📌 Detect **peak crime hours** by day & time.  
-- 📌 Study **weapon usage trends** for different crimes.  
-- 📌 Recommend **patrol scheduling** during high-crime periods.  
-- 📌 Provide **data-backed reports** for better policy-making.
+-  Identify **most common crime types** across NYPD, LAPD datasets.  
+-  Detect **peak crime hours** by day & time.  
+-  Study **weapon usage trends** for different crimes.  
+-  Recommend **patrol scheduling** during high-crime periods.  
+-  Provide **data-backed reports** for better policy-making.
 
 
 
 ## 📌 Data Sources
--  📌 **Time Range:** 2010–2023  
--  📌 **Cities Covered:**  
+-   **Time Range:** 2010–2023  
+-   **Cities Covered:**  
   -  New York (NYPD)  
   -  Los Angeles (LAPD)  
     
--  📌 Formats: CSV  
--  📌 Source Website: data.gov
+-   Formats: CSV  
+-   Source Website: data.gov
 ## Columns discription
 | **Column Name**        | **Description** |
 |------------------------|-----------------|
@@ -67,22 +67,22 @@ This project aims to analyze historical crime records using big data technologie
 ## 📌Tech stack
 
 
-- 📌 **Cloud & Storage:** AWS S3, AWS Glue, AWS Athena  
-- 📌 **Data Processing:** PySpark, Python (Pandas, NumPy)  
-- 📌 **Database:** AWS Glue Data Catalog 
-- 📌 **Visualization:** Power BI 
-- 📌 **Version Control:** GitHub  
-- 📌 **Automation:** Github action and Terraform
+-  **Cloud & Storage:** AWS S3, AWS Glue, AWS Athena  
+-  **Data Processing:** PySpark, Python (Pandas, NumPy)  
+-  **Database:** AWS Glue Data Catalog 
+-  **Visualization:** Power BI 
+-  **Version Control:** GitHub  
+-  **Automation:** Github action and Terraform
 ## 📌 Workflow
 
-1. 📌 **Data Collection** – Crime records from NYPD, LAPD.  
-2. 📌 **Exploratory Data Analysis (EDA)** – Understand data structure, detect patterns, spot anomalies, and get initial insights.
-3. 📌 **Master Data Creation** – Merge & join all two datasets (NYPD, LAPD) into a standardized unified dataset.
-4. 📌 **Data Cleaning** – Remove duplicates, handle missing data, standardize formats.  
-5. 📌 **Data Analysis** – Trends, hotspots, and weapon distribution.  
-6. 📌 **Dashboard Creation** – Interactive visuals with filters.
+1.  **Data Collection** – Crime records from NYPD, LAPD.  
+2.  **Exploratory Data Analysis (EDA)** – Understand data structure, detect patterns, spot anomalies, and get initial insights.
+3.  **Master Data Creation** – Merge & join all two datasets (NYPD, LAPD) into a standardized unified dataset.
+4.  **Data Cleaning** – Remove duplicates, handle missing data, standardize formats.  
+5.  **Data Analysis** – Trends, hotspots, and weapon distribution.  
+6.  **Dashboard Creation** – Interactive visuals with filters.
 
-## 🏛Architecture Diagram
+## 📌Architecture Diagram
 <img width="3200" height="1196" alt="Architecture diagram" src="https://github.com/user-attachments/assets/acfbf610-a9ad-4927-8744-7b50de11ce8a" />
 
 
