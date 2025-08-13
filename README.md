@@ -5,11 +5,10 @@
 # 🚔 CrimeTracker 360
 
 > **"Tagline-->Data-driven insights to make US cities safer."**  
-CrimeTracker 360 analyzes crime incident data from **NYPD**, **LAPD**, and **CPD** (2001–2025) to uncover patterns, hotspots, and weapon trends.  
+CrimeTracker 360 analyzes crime incident data from **NYPD** and **LAPD** (2001–2025) to uncover patterns, hotspots, and weapon trends.  
 The goal is to help **government** and **law enforcement** optimize patrol schedules, allocate resources efficiently, and enhance public safety.
 
 # 📌Problem Statement
-
 
 Despite the availability of extensive crime-related data, cities often struggle to identify high-risk areas, detect patterns in criminal behaviour, and address resource allocation needs effectively.
 
@@ -24,12 +23,11 @@ This project aims to analyze historical crime records using big data technologie
 📊 Support data-driven policing through real-time dashboards
 
 ## 🎯Objectives
-- 📍 Identify **most common crime types** across NYPD, LAPD, and CPD datasets.  
+- 📍 Identify **most common crime types** across NYPD and LAPD datasets.  
 - ⏰ Detect **peak crime hours** by day & time.  
 - 🔫 Study **weapon usage trends** for different crimes.  
 - 🚓 Recommend **patrol scheduling** during high-crime periods.  
 - 📊 Provide **data-backed reports** for better policy-making.
-
 
 
 ## 📂 Data Sources
@@ -37,7 +35,6 @@ This project aims to analyze historical crime records using big data technologie
 - 🏙 **Cities Covered:**  
   - 🗽 New York (NYPD)  
   - 🌴 Los Angeles (LAPD)  
-  - 🌆 Chicago (CPD)  
 - 📄 Formats: CSV  
 - 🌐 Source Website: data.gov
 ## Columns discription
@@ -51,7 +48,6 @@ This project aims to analyze historical crime records using big data technologie
 | `longitude`            | Longitude coordinate of the crime location. |
 | `jurisdiction`         | Police jurisdiction or precinct responsible for handling the case. |
 | `arrest_made`          | Indicates whether an arrest was made (`Yes`/`No`). |
-| `domestic_incident`    | Specifies if the crime was related to a domestic situation (`Yes`/`No`). |
 | `victim_age`           | Age of the victim involved in the incident. |
 | `victim_sex`           | Gender of the victim (`Male`/`Female`/`Other`/`Unknown`). |
 | `suspect_age`          | Age of the suspect involved in the incident. |
@@ -76,9 +72,9 @@ This project aims to analyze historical crime records using big data technologie
 - ⚙ **Automation:** Github action and Terraform
 ## 🔄Workflow
 
-1. 📥 **Data Collection** – Crime records from NYPD, LAPD, CPD.  
+1. 📥 **Data Collection** – Crime records from NYPD and LAPD.  
 2. 🔍 **Exploratory Data Analysis (EDA)** – Understand data structure, detect patterns, spot anomalies, and get initial insights.
-3. 🗂 **Master Data Creation** – Merge & join all three datasets (NYPD, LAPD, CPD) into a standardized unified dataset.
+3. 🗂 **Master Data Creation** – Merge & join the datasets (NYPD and LAPD) into a standardized unified dataset.
 4. 🧹 **Data Cleaning** – Remove duplicates, handle missing data, standardize formats.  
 5. 📊 **Data Analysis** – Trends, hotspots, and weapon distribution.  
 6. 📉 **Dashboard Creation** – Interactive visuals with filters.  
