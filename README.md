@@ -1,8 +1,6 @@
 
-# Project Title
+#  Crimetracker 360°: Cloud-Based Policing Analytics
 
-
-# 📌 CrimeTracker 360
 
 > **"Data-driven insights to make US cities safer."**  
 CrimeTracker 360 analyzes crime incident data from **NYPD**, **LAPD** (2010–2023) to uncover patterns, hotspots, and weapon trends.  
