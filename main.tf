@@ -27,7 +27,7 @@ resource "aws_glue_crawler" "my_crawler" {
   database_name = aws_glue_catalog_database.etl_db.name
 
   s3_target {
-    path = "s3://raw-master-transformed-factdim-grp-5/facts_data1/"
+    path = "s3://raw-master-transformed-factdim-grp-5/transformed-data_automate/"
  }
 
   depends_on = [aws_glue_job.etl_job]
