@@ -307,7 +307,7 @@ transform_df2 = transform_df2.withColumn(
 transform_df2 = transform_df2.withColumnRenamed("race_group", "victim_race_group")
 selected_columns = [
     'report_date', 'occurred_date', 'occurred_time', 'crime_code',
-    'latitude', 'longitude', 'jurisdiction', 'arrest_made', 'domestic_incident',
+    'latitude', 'longitude', 'jurisdiction', 'arrest_made',
     'victim_age', 'victim_sex', 'suspect_age', 'suspect_sex', 'source',
     'crime_category', 'weapon_category', 'city', 'location_category',
     'victim_race_group', 'case_num', 'suspect_race_group'
