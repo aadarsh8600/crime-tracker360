@@ -5,7 +5,7 @@
 # 🚔 CrimeTracker 360
 
 > **"Tagline-->Data-driven insights to make US cities safer."**  
-CrimeTracker 360 analyzes crime incident data from **NYPD**, **LAPD** (2001–2025) to uncover patterns, hotspots, and weapon trends.  
+CrimeTracker 360 analyzes crime incident data from **NYPD**, **LAPD** (2010–2023) to uncover patterns, hotspots, and weapon trends.  
 The goal is to help **government** and **law enforcement** optimize patrol schedules, allocate resources efficiently, and enhance public safety.
 
 # 📌Problem Statement
@@ -33,7 +33,7 @@ This project aims to analyze historical crime records using big data technologie
 
 
 ## 📂 Data Sources
-- 🗓 **Time Range:** 2001–2025  
+- 🗓 **Time Range:** 2010–2023  
 - 🏙 **Cities Covered:**  
   - 🗽 New York (NYPD)  
   - 🌴 Los Angeles (LAPD)  
@@ -51,7 +51,6 @@ This project aims to analyze historical crime records using big data technologie
 | `longitude`            | Longitude coordinate of the crime location. |
 | `jurisdiction`         | Police jurisdiction or precinct responsible for handling the case. |
 | `arrest_made`          | Indicates whether an arrest was made (`Yes`/`No`). |
-| `domestic_incident`    | Specifies if the crime was related to a domestic situation (`Yes`/`No`). |
 | `victim_age`           | Age of the victim involved in the incident. |
 | `victim_sex`           | Gender of the victim (`Male`/`Female`/`Other`/`Unknown`). |
 | `suspect_age`          | Age of the suspect involved in the incident. |
@@ -59,7 +58,7 @@ This project aims to analyze historical crime records using big data technologie
 | `source`               | Origin of the data (e.g., `NYPD`, `LAPD`, `CPD`). |
 | `crime_category`       | General category/type of crime (e.g., `Assault`, `Theft`, `Robbery`). |
 | `weapon_category`      | Type of weapon used in the crime (e.g., `Firearm`, `Knife`, `None`). |
-| `city`                 | City where the crime occurred (`New York`, `Los Angeles`, `Chicago`). |
+| `city`                 | City where the crime occurred (`New York`, `Los Angeles`). |
 | `location_category`    | Type of location where the crime occurred (e.g., `Street`, `Residence`, `Commercial`). |
 | `victim_race_group`    | Racial/ethnic group of the victim. |
 | `case_num`             | Unique case number or complaint number assigned by police. |
