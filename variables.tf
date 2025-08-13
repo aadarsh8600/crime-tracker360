@@ -18,12 +18,12 @@ variable "glue_job_name" {
 
 
 
-#declare a crawler for facts table
+#declare a crawler
 variable "glue_crawler_name"{
   default="my_etl_crawler"
 }
 
 declare a script path
 variable "script_s3_path" {
-  default = "s3://raw-master-transformed-factdim-grp-5/scripts/learning.py"
+  default = "s3://raw-master-transformed-factdim-grp-5/scripts/etlscript.py"
 }
