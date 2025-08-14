@@ -364,8 +364,12 @@ transform_df2 = transform_df2.withColumn(
 write_mode = "overwrite"
 file_format = "csv"
 
+# Write Master Data
+master_df.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://rawdatagroup5123123456/master-data_automate/")
+
 # Write Transformed Data
-transform_df2.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://raw-master-transformed-factdim-grp-5/transformed-data_automate/")
+transform_df2.coalesce(1).write.mode(write_mode).option("header", "true").csv("s3://rawdatagroup5123123456/transformed-data_automate/")
+
 
 
 
