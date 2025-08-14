@@ -83,6 +83,8 @@ This project aims to analyze historical crime records using big data technologie
 ## 📌Architecture Diagram
 <img width="3200" height="1604" alt="Blank diagram (3)" src="https://github.com/user-attachments/assets/6251786c-0c0e-4c76-a3aa-053c437a3e3b" />
 
+## Agenda
+![WhatsApp Image 2025-08-14 at 11 29 51 AM](https://github.com/user-attachments/assets/a2961ef6-4fee-417d-8369-0d1edad46312)
 
 
 
