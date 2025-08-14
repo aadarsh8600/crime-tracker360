@@ -81,7 +81,8 @@ This project aims to analyze historical crime records using big data technologie
 6.  **Dashboard Creation** – Interactive visuals with filters.
 
 ## 📌Architecture Diagram
-<img width="3200" height="1196" alt="Architecture diagram" src="https://github.com/user-attachments/assets/acfbf610-a9ad-4927-8744-7b50de11ce8a" />
+<img width="3200" height="1604" alt="Blank diagram (1)" src="https://github.com/user-attachments/assets/c2d8c0ce-50f3-47a5-9579-431fe4ba6f04" />
+
 
 
 
