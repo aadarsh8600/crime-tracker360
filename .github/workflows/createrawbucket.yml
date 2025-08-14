@@ -46,7 +46,7 @@ jobs:
       # Step 7: Upload the ETL Python script to S3 so Glue can access it
       - name: Upload ETL Script to S3
         run: |
-          aws s3 cp etlscript.py s3://raw-master-transformed-factdim-grp-5/scripts/etlscript.py
+          aws s3 cp etlscript.py s3://rawdatagroup5123123456/scripts/etlscript.py
           echo "ETL script uploaded to S3."
 
       # Step 8: Start the AWS Glue ETL job
