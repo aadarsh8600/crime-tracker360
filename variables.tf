@@ -25,5 +25,5 @@ variable "glue_crawler_name"{
 
 #declare a script path
 variable "script_s3_path" {
-  default = "s3://raw-master-transformed-factdim-grp-5/scripts/etlscript.py"
+  default = "s3://rawdatagroup5123123456/scripts/etlscript.py"
 }
