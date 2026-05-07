@@ -1,8 +1,6 @@
 
-# Project Title
+#  Crimetracker 360°: Cloud-Based Policing Analytics
 
-
-# 📌 CrimeTracker 360
 
 > **"Data-driven insights to make US cities safer."**  
 CrimeTracker 360 analyzes crime incident data from **NYPD**, **LAPD** (2010–2023) to uncover patterns, hotspots, and weapon trends.  
@@ -15,13 +13,13 @@ Despite the availability of extensive crime-related data, cities often struggle 
 
 This project aims to analyze historical crime records using big data technologies to extract actionable insights that can help law enforcement agencies:
 
-📌 Understand crime distribution by type, time, and location
+- Understand crime distribution by type, time, and location
 
-📌 Identify trends and anomalies across years and neighbourhoods
+- Identify trends and anomalies across years and neighbourhoods
 
-📌 Improve prediction and prevention strategies
+- Improve prediction and prevention strategies
 
-📌 Support data-driven policing through real-time dashboards
+- Support data-driven policing through real-time dashboards
 
 ## 📌 Objectives
 -  Identify **most common crime types** across NYPD, LAPD datasets.  
@@ -67,12 +65,12 @@ This project aims to analyze historical crime records using big data technologie
 ## 📌Tech stack
 
 
--  **Cloud & Storage:** AWS S3, AWS Glue, AWS Athena  
--  **Data Processing:** PySpark, Python (Pandas, NumPy)  
--  **Database:** AWS Glue Data Catalog 
--  **Visualization:** Power BI 
--  **Version Control:** GitHub  
--  **Automation:** Github action and Terraform
+-  **Cloud & Storage:** AWS S3, AWS Glue, AWS Athena.  
+-  **Data Processing:** PySpark, SparkSQL, Python (Pandas, NumPy).  
+-  **Database:** AWS Glue Data Catalog. 
+-  **Visualization:** Power BI. 
+-  **Version Control:** GitHub.  
+-  **Automation:** Github action and Terraform.
 ## 📌 Workflow
 
 1.  **Data Collection** – Crime records from NYPD, LAPD.  
@@ -83,7 +81,8 @@ This project aims to analyze historical crime records using big data technologie
 6.  **Dashboard Creation** – Interactive visuals with filters.
 
 ## 📌Architecture Diagram
-<img width="3200" height="1604" alt="Blank diagram (3)" src="https://github.com/user-attachments/assets/5c36e5c4-e2fd-44f3-bc60-ddd5b88fae1e" />
+<img width="3200" height="1604" alt="Blank diagram (3)" src="https://github.com/user-attachments/assets/c2abfd04-29b6-477b-863f-6ea150f0ce9a" />
+
 
 
 
